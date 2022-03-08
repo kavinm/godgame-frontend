@@ -1,0 +1,190 @@
+.transition_top {
+  margin-top: -100px;
+  z-index: 1;
+}
+.the_container {
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.steak_unsteak {
+  
+  font-family: PixelSplitter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  /* identical to box height, or 430% */  
+  letter-spacing: 0.095em;
+  color: #000000;
+}
+
+.steak_unsteak p {
+  line-height: none;
+  text-align: left;
+  left: 0px;
+}
+
+.black_box {
+  background-color: black;
+  width: 248px;
+  margin-top: 0;
+  height: 81px;
+  position: relative;
+}
+
+.teal_box {
+  background-color: #D6E9EF;
+  width: 338px;
+  margin-top: 0;
+  height: 434px;
+  position: relative;
+}
+
+.teal_box img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.black_box p {
+  font-family: PixelSplitter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 23px;
+  line-height: 46px;
+  /* or 202% */
+
+  letter-spacing: 0.11em;
+  margin-top: 0;
+  color: #FFFFFF;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.collect_faith {
+  font-family: PixelSplitter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 62px;
+  /* identical to box height, or 177% */
+
+  text-align: center;
+  letter-spacing: 0.095em;
+
+  color: #000000;
+}
+
+.flex-container-about {
+  display: flex;
+}
+
+.flex-child-about {
+  flex: 1;
+}  
+
+.flex-child-about:first-child {
+  margin-right: 90px;
+} 
+
+
+.second-flex-container-about {
+  display: flex;
+}
+
+.second-flex-child-about {
+  flex: 1;
+}
+
+.second-flex-child-about:first-child {
+  margin-right: 90px;
+} 
+
+.about-section {
+  margin-top: 500px;
+}
+
+.about-text-card {
+  width: 60vw;
+
+}
+
+.about-text-card h3 {
+  font-family: PixelSplitter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 62px;
+  /* identical to box height, or 248% */
+  letter-spacing: 0.095em;
+  text-align: left;
+  color: #FCB10C;
+  margin-bottom: 0;
+}
+
+.about-text-card h2 {
+  font-family: PixelSplitter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 64px;
+  /* or 184% */
+  margin-top: 5px;
+  text-align: left;
+  color: #000000;
+}
+
+.about-text-card p {
+  font-family: Space Grotesk;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  /* or 164% */
+
+
+  color: #000000;
+  text-align: left;
+}
