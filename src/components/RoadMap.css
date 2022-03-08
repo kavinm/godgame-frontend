@@ -1,0 +1,80 @@
+.centered_roadmap {
+  position: absolute;
+  top: 600px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered_roadmap h1 {
+  font-family: PixelSplitter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 57px;
+  /* or 163% */
+  
+  text-align: center;
+  letter-spacing: 0.095em;
+
+  color: black;
+}
+
+.flex-container-roadmap {
+  display: flex;
+}
+
+.flex-child-roadmap {
+  flex: 1;
+}  
+
+.flex-child-roadmap:first-child {
+  margin-right: 90px;
+} 
+
+.blue_box {
+  background-color: #31778D;
+  width: 472px;
+  height: 381px;
+  position: relative;
+  margin-top: 80px;
+  border-radius: 5px;
+
+}
+
+.g-pattern-roadmap {
+  margin-top: 20px;
+}
+
+.blue_box h2 {
+  font-family: PixelSplitter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 64px;
+  /* or 161% */
+  margin-top: 5px;
+  text-align: left;
+  margin-left: 20px;
+  color: #FFFFFF;
+
+}
+
+.details-paragraph {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  
+}
+
+.details-paragraph p {
+  text-align: left;
+  font-family: Space Grotesk;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  /* or 162% */
+  margin: 10px 0;
+
+
+  color: #FFFFFF;
+}

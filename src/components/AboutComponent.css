@@ -68,6 +68,8 @@
   margin-top: 0;
   height: 81px;
   position: relative;
+  border-radius: 3px;
+
 }
 
 .teal_box {
@@ -76,6 +78,8 @@
   margin-top: 0;
   height: 434px;
   position: relative;
+  border-radius: 5px;
+
 }
 
 .teal_box img {

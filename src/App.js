@@ -1,6 +1,9 @@
 import NavBar from "./components/NavBar";
 import LandingComponent from "./components/LandingComponent";
 import AboutComponent from "./components/AboutComponent";
+import SampleMints from "./components/SampleMints";
+import RoadMap from "./components/RoadMap";
+import FaqPage from "./components/FaqPage";
 
 function App() {
   return (
@@ -8,6 +11,9 @@ function App() {
       <NavBar/>
       <LandingComponent/>
       <AboutComponent/>
+      <SampleMints/>
+      <RoadMap/>
+      <FaqPage/>
     </div>
   );
 }

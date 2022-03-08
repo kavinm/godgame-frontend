@@ -1,0 +1,100 @@
+.centered_minted_from_heavens {
+  position: absolute;
+  top: 600px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered_minted_from_heavens h1 {
+  font-family: PixelSplitter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 57px;
+  /* or 163% */
+
+  text-align: center;
+  letter-spacing: 0.095em;
+
+  color: #FFFFFF;
+}
+
+
+.white_card {
+
+  background-color: white;
+  width: 468px;
+  margin-top: 0;
+  height: 672px;
+  position: relative;
+  border-radius: 5px;
+
+
+}
+
+.flex-container-mint {
+  display: flex;
+}
+
+.flex-child-about-mint {
+  flex: 1;
+}  
+
+.flex-child-about-mint:first-child {
+  margin-right: 90px;
+} 
+
+.g-pattern {
+  margin-top: 10px;
+}
+
+.grey_box {
+  background-color: #DAE7EB;
+  width: 431px;
+  margin-top: 0;
+  height: 416px;
+  position: relative;
+  margin-top: 15px;
+}
+
+.grey_box img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card_text {
+  margin-left: 40px;
+}
+
+
+.card_text h2 {
+  text-align: left;
+  font-family: PixelSplitter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 0.095em;
+
+  color: #000000;
+}
+
+.card_text h3 {
+  text-align: left;
+  font-family: PixelSplitter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  color: #FDC500;
+}
+
+.card_text h4 {
+  text-align: left;
+  font-family: PixelSplitter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+
+  color: #000000;
+}
