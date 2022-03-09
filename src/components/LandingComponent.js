@@ -1,6 +1,5 @@
 import React from 'react'
 import './LandingComponent.css'
-import bootstrap from 'bootstrap'
 
 const LandingComponent = () => {
   return (
