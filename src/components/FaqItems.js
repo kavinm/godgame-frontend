@@ -20,10 +20,6 @@ const FaqItems = (props) => {
     }
   }
 
-
-
-
-
   return (
     <div style={{marginBottom: 20, width: '20%'}} className='container-row'>
       <div className='drop_down_box_hidden flex-container layer1'>
