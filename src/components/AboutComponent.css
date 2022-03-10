@@ -15,6 +15,10 @@
   bottom: 8px;
   left: 16px;
 }
+/* Black */
+.black{
+  color: black;
+}
 
 /* Top left text */
 .top-left {
@@ -152,6 +156,7 @@
 
 .about-text-card {
   width: 60vw;
+  color: black;
 
 }
 
