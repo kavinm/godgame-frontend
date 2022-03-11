@@ -12,7 +12,7 @@
   font-size: 35px;
   line-height: 57px;
   /* or 163% */
-  
+
   text-align: center;
   letter-spacing: 0.095em;
 
@@ -25,20 +25,19 @@
 
 .flex-child-roadmap {
   flex: 1;
-}  
+}
 
 .flex-child-roadmap:first-child {
   margin-right: 90px;
-} 
+}
 
 .blue_box {
-  background-color: #31778D;
+  background-color: #31778d;
   width: 472px;
   height: 381px;
   position: relative;
   margin-top: 80px;
   border-radius: 5px;
-
 }
 
 .g-pattern-roadmap {
@@ -55,15 +54,13 @@
   margin-top: 5px;
   text-align: left;
   margin-left: 20px;
-  color: #FFFFFF;
-
+  color: #ffffff;
 }
 
 .details-paragraph {
   position: absolute;
   bottom: 10px;
   left: 20px;
-  
 }
 
 .details-paragraph p {
@@ -75,6 +72,17 @@
   /* or 162% */
   margin: 10px 0;
 
+  color: #ffffff;
+}
 
-  color: #FFFFFF;
+.details-paragraph ul {
+  text-align: left;
+  font-family: Space Grotesk;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  /* or 162% */
+  margin: 10px 0;
+
+  color: #ffffff;
 }
