@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'PixelSplitter';
+  src: url('./font/PixelSplitter-Bold.ttf');
+}
 .first_layer {
   background-image: url('../../public/Hero_Background.png');
   background-size: contain;
