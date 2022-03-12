@@ -51,7 +51,7 @@ const FaqPage = () => {
         <h1 className="footer_title">GOD GAME</h1>
         <div className="row">
           <div className="column" style={{ textAlign: "right" }}>
-            <a href="https://discord.gg/5nCzGqNKT9">
+            <a href="https://discord.gg/T3mWyNmN">
               <img src="/dicscord-icon-purple.svg" alt="discord" />
             </a>
           </div>
