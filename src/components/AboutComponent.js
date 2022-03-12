@@ -31,6 +31,8 @@ const AboutComponent = () => {
                 THE FIRST COMPLETELY ON-CHAIN <br /> NFT COLLECTION ON METIS
               </h2>
               <p>
+              Are you worthy of the Gods' favor? Will you be able to handle the risk for the divine rewards that await you?
+Somewhere in Ancient Greece an early settlement of impressionable Worshippers built a Temple to foster their $FAITH in the Pantheon of Gods. The longer they stay in the temple the more their household's $FAITH increases. Using $FAITH the household can gather more Worshippers!
                 God Game is the first NFT project on Metis to store all
                 metadata, including the image, on chain.
               </p>

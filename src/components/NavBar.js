@@ -29,6 +29,7 @@ const NavBar = () => {
       <div>
         <ul>
           <div className="middleBar">
+
             <button className="button1">About</button>
             <button className="button2">Stake</button>
 
