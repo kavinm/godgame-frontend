@@ -32,9 +32,9 @@ const NavBar = () => {
             <button className="button1">About</button>
             <button className="button2">Stake</button>
 
-            <Link to="/whitepaper">
-              <button className="button3">Whitepaper</button>
-            </Link>
+            <a href="https://medium.com/@metisgodgame">
+              <button className="button3"> Whitepaper</button>
+            </a>
 
             <a href="https://discord.gg/5nCzGqNKT9">
               <FaDiscord className="discord" style={{ color: "white" }} />
