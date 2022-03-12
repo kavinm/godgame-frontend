@@ -28,7 +28,8 @@
   margin-left: 20px;
 }
 .button1 {
-  background-color: #FFC545; 
+  background-color: black; 
+  font-family: 'PixelSplitter', sans-serif;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -38,7 +39,8 @@
   font-size: 16px;
 }
 .button2 {
-  background-color: #FFC545; 
+  background-color:black; 
+  font-family: 'PixelSplitter', sans-serif;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -48,7 +50,8 @@
   font-size: 16px;
 }
 .button3 {
-  background-color: #FFC545; 
+  background-color: black; 
+  font-family: 'PixelSplitter', sans-serif;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -59,17 +62,17 @@
 }
 .button1:hover {
   
-  background-color: black; 
+  background-color: #FFC545; 
   color: white;
 }
 .button2:hover {
   
-  background-color: black; 
+  background-color: #FFC545; 
   color: white;
 }
 .button3:hover {
   
-  background-color: black; 
+  background-color: #FFC545; 
   color: white;
 }
 
