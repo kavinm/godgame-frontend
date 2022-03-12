@@ -4,6 +4,7 @@ import LandingComponent from "./components/LandingComponent";
 import AboutComponent from "./components/AboutComponent";
 import SampleMints from "./components/SampleMints";
 import RoadMap from "./components/RoadMap";
+import Whitepaper from "./components/Whitepaper"
 import FaqPage from "./components/FaqPage";
 import Whitepaper from "./components/Whitepaper";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
