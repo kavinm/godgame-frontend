@@ -1,7 +1,21 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./NavBar.css";
+import "./AboutComponent.js";
 import { FaDiscord, FaTwitter } from "react-icons/fa";
+import AboutComponent from "./AboutComponent.js";
+
+var script = document.createElement('script');
+script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
+
+function scrollFunction(){
+      ('html,body').animate({
+          scrollTop: ("layer1").offset().top},
+          'slow');
+}
+
 
 const NavBar = () => {
   return (
@@ -12,16 +26,16 @@ const NavBar = () => {
       <div>
         <ul>
           <div className="middleBar">
-            <a className="middleMargins">About</a>
-            <a className="middleMargins">Stake</a>
-            <a className="middleMargins">Whitepaper</a>
+            <button className="button1" >About</button>
+            <button className="button2">Stake</button>
+            <button className="button3">Whitepaper</button>
 
             <a href="https://discord.gg/5nCzGqNKT9">
-              <FaDiscord className="middleMargins" style={{ color: "white" }} />
+              <FaDiscord className="discord" style={{ color: "white" }} />
             </a>
 
             <a href="https://twitter.com/METIS_GodGame">
-              <FaTwitter className="middleMargins" style={{ color: "white" }} />
+              <FaTwitter className="twitter" style={{ color: "white" }} />
             </a>
           </div>
         </ul>
@@ -49,6 +63,9 @@ const NavBar = () => {
             </div>
           </li>
         </ul>
+      </div>
+      <div className = "about">
+        
       </div>
     </div>
   );

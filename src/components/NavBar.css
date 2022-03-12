@@ -15,13 +15,62 @@
   color: #333;
 }
 
-.middleMargins {
+.discord {
   margin-right: 20px;
   margin-left: 20px;
 }
+.twitter {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.button1 {
+  background-color: #FFC545; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.button2 {
+  background-color: #FFC545; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.button3 {
+  background-color: #FFC545; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.button1:hover {
+  
+  background-color: black; 
+  color: white;
+}
+.button2:hover {
+  
+  background-color: black; 
+  color: white;
+}
+.button3:hover {
+  
+  background-color: black; 
+  color: white;
+}
 
-.header a:hover {
-  color: #000;
+.middlebar a:hover {
+  color: white;
 }
 .header ul {
   display: flex;
@@ -42,6 +91,7 @@
 .middleBar a {
   color: white;
 }
+
 
 
 @media (max-width: 768px) {
