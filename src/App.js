@@ -1,4 +1,5 @@
 import NavBar from "./components/NavBar";
+import { Switch, Route } from 'react-router-dom'
 import LandingComponent from "./components/LandingComponent";
 import AboutComponent from "./components/AboutComponent";
 import SampleMints from "./components/SampleMints";
