@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'PixelSplitter';
+  src: url('./font/PixelSplitter-Bold.ttf');
+}
 .centered_roadmap {
   position: absolute;
   top: 600px;
