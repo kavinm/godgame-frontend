@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'PixelSplitter';
+  src: url('./font/PixelSplitter-Bold.ttf');
+}
 .centered_roadmap {
   position: absolute;
   top: 600px;
@@ -65,7 +69,7 @@
 
 .details-paragraph p {
   text-align: left;
-  font-family: Space Grotesk;
+  font-family: PixelSplitter;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -77,7 +81,7 @@
 
 .details-paragraph ul {
   text-align: left;
-  font-family: Space Grotesk;
+  font-family: PixelSplitter;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
