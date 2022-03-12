@@ -15,12 +15,12 @@ const RoadMap = () => {
                 className="g-pattern-roadmap"
                 alt="greed design G"
               />
-              <h2>PHASE 1</h2>
+              <h2>PHASE 1: Premint</h2>
               <div className="details-paragraph">
                 <ul>
                   <li>Partnerships with other Projects</li>
                   <li>Discord Launch</li>
-                  <li></li>
+                  <li>Giveaways on Discord and Twitter</li>
                 </ul>
               </div>
             </div>
@@ -32,7 +32,7 @@ const RoadMap = () => {
                 className="g-pattern-roadmap"
                 alt="greed design G"
               />
-              <h2>PHASE 2</h2>
+              <h2>PHASE 2: Minting Live</h2>
               <div className="details-paragraph">
                 <ul>
                   <li>MINT GOES LIVE</li>
@@ -51,7 +51,7 @@ const RoadMap = () => {
                 className="g-pattern-roadmap"
                 alt="greed design G"
               />
-              <h2>PHASE 3</h2>
+              <h2>PHASE 3: First 2,222 Minted </h2>
               <div className="details-paragraph">
                 <ul>
                   <li>Staking/Unstaking is enabled</li>
@@ -68,7 +68,7 @@ const RoadMap = () => {
                 className="g-pattern-roadmap"
                 alt="greed design G"
               />
-              <h2>PHASE 4</h2>
+              <h2>PHASE 4: Fully Minted</h2>
               <div className="details-paragraph">
                 <ul>
                   <li>
