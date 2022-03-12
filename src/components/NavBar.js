@@ -4,18 +4,21 @@ import "./NavBar.css";
 import "./AboutComponent.js";
 import { FaDiscord, FaTwitter } from "react-icons/fa";
 import AboutComponent from "./AboutComponent.js";
+import { Link } from "react-router-dom";
 
-var script = document.createElement('script');
-script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
-script.type = 'text/javascript';
-document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement("script");
+script.src = "https://code.jquery.com/jquery-3.6.0.min.js";
+script.type = "text/javascript";
+document.getElementsByTagName("head")[0].appendChild(script);
 
-function scrollFunction(){
-      ('html,body').animate({
-          scrollTop: ("layer1").offset().top},
-          'slow');
+function scrollFunction() {
+  "html,body".animate(
+    {
+      scrollTop: "layer1".offset().top,
+    },
+    "slow"
+  );
 }
-
 
 const NavBar = () => {
   return (
@@ -26,9 +29,12 @@ const NavBar = () => {
       <div>
         <ul>
           <div className="middleBar">
-            <button className="button1" >About</button>
+            <button className="button1">About</button>
             <button className="button2">Stake</button>
-            <button className="button3">Whitepaper</button>
+
+            <Link to="/whitepaper">
+              <button className="button3">Whitepaper</button>
+            </Link>
 
             <a href="https://discord.gg/5nCzGqNKT9">
               <FaDiscord className="discord" style={{ color: "white" }} />
@@ -64,9 +70,7 @@ const NavBar = () => {
           </li>
         </ul>
       </div>
-      <div className = "about">
-        
-      </div>
+      <div className="about"></div>
     </div>
   );
 };

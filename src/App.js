@@ -1,25 +1,34 @@
 import NavBar from "./components/NavBar";
-import { Switch, Route } from 'react-router-dom'
+
 import LandingComponent from "./components/LandingComponent";
 import AboutComponent from "./components/AboutComponent";
 import SampleMints from "./components/SampleMints";
 import RoadMap from "./components/RoadMap";
 import FaqPage from "./components/FaqPage";
+import Whitepaper from "./components/Whitepaper";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import * as React from "react";
-
 
 function App() {
   return (
     <div>
-      <NavBar/>
-      <Route exact path="/whitepaper">
-        </Route>
-        <Whitepaper />
-      <LandingComponent/>
-      <AboutComponent/>
-      <SampleMints/>
-      <RoadMap/>
-      <FaqPage/>
+      <BrowserRouter>
+        <div>
+          <NavBar />
+          <Switch>
+            <Route exact path="/whitepaper">
+              {" "}
+              <Whitepaper />
+            </Route>
+          </Switch>
+
+          <LandingComponent />
+          <AboutComponent />
+          <SampleMints />
+          <RoadMap />
+          <FaqPage />
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
