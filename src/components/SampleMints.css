@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'PixelSplitter';
+  src: url('./font/PixelSplitter-Bold.ttf');
+}
 .centered_minted_from_heavens {
   position: absolute;
   top: 600px;
