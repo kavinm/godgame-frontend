@@ -23,7 +23,7 @@ const FaqPage = () => {
           />
           <FaqItems
             title="Where can we view our nft?"
-            description="metis.market and tofunft. You can also read from our contracts in the Andromeda block explorer, to pull up your NFT with your token ID!"
+            description="tofunft. You can also read from our contracts in the Andromeda block explorer, to pull up your NFT with your token ID!"
           />
           <FaqItems
             title="How many tokens are generated?"
