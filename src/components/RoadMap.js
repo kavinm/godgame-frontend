@@ -81,8 +81,6 @@ const RoadMap = () => {
                     Faith becomes a meme token with no utility, <br /> supply is
                     capped and ownership of contract is renounced
                   </li>
-
-                  <li>All 10,000 minted gods/worshippers are on Metis</li>
                 </ul>
               </div>
             </div>
