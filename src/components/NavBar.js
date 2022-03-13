@@ -37,7 +37,7 @@ const NavBar = () => {
               <button className="button3"> Whitepaper</button>
             </a>
 
-            <a href="https://discord.gg/T3mWyNmN">
+            <a href="https://discord.gg/YF4VWBjGNz">
               <FaDiscord className="discord" style={{ color: "white" }} />
             </a>
 
