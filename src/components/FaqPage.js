@@ -19,7 +19,7 @@ const FaqPage = () => {
           />
           <FaqItems
             title="What is the mint price per NFT?"
-            description=".5 METIS"
+            description=".69 METIS"
           />
           <FaqItems
             title="Where can we view our nft?"
