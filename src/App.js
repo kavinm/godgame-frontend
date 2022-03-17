@@ -6,22 +6,22 @@ import SampleMints from "./components/SampleMints";
 import RoadMap from "./components/RoadMap";
 
 import FaqPage from "./components/FaqPage";
-import Whitepaper from "./components/Whitepaper";
+import DisplayNFT from "./components/DisplayNFT";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import * as React from "react";
 
 function App() {
   return (
     <div>
-      {/* <BrowserRouter> */}
+      <BrowserRouter>
       <div>
         <NavBar />
-        {/* <Switch>
-            <Route exact path="/whitepaper">
+        <Switch>
+            <Route exact path="/displaynft">
               {" "}
-              <Whitepaper />
+              <DisplayNFT/>
             </Route>
-          </Switch> */}
+          </Switch> 
 
         <LandingComponent />
         <AboutComponent />
@@ -29,7 +29,7 @@ function App() {
         <RoadMap />
         <FaqPage />
       </div>
-      {/* </BrowserRouter> */}
+      </BrowserRouter>
     </div>
   );
 }

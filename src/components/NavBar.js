@@ -31,7 +31,7 @@ const NavBar = () => {
           <div className="middleBar">
 
             <button className="button1">About</button>
-            <button className="button2">Stake</button>
+            <Link to="/displayNFT">View NFT</Link>
 
             <a href="https://medium.com/@metisgodgame">
               <button className="button3"> Whitepaper</button>
