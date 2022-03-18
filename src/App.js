@@ -9,27 +9,36 @@ import FaqPage from "./components/FaqPage";
 import DisplayNFT from "./components/DisplayNFT";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import * as React from "react";
+import { useState, useEffect } from "react";
 
 function App() {
+  const [isWalletConnected, setIsWalletConnected] = useState(false);
+
+  useEffect(() => {
+    console.log(isWalletConnected);
+  }, [isWalletConnected]);
+
   return (
     <div>
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
       <div>
-        <NavBar />
-        <Switch>
+        <DisplayNFT />
+
+        <NavBar stateChanger={setIsWalletConnected} />
+
+        {/* <Switch>
             <Route exact path="/displaynft">
               {" "}
               <DisplayNFT/>
             </Route>
-          </Switch> 
-
-        <LandingComponent />
+          </Switch>  */}
+        <LandingComponent isWalletConnected={isWalletConnected} />
         <AboutComponent />
         <SampleMints />
         <RoadMap />
         <FaqPage />
       </div>
-      </BrowserRouter>
+      {/* // </BrowserRouter> */}
     </div>
   );
 }
