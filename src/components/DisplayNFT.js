@@ -6,37 +6,34 @@ import god from "./utils/God.json";
 const ethers = require("ethers");
 
 
-let accounts;
-let eoa;
-let factory;
 let contract;
 const traitAddress = '0x8Fad2dD108e3dC171E8271CDF8B9EA768260Ea5f';
 const godAddress = '0x66A7De7572B70850BB6cC0a5DFf03dD3E93E1da6';
 const { ethereum } = window;
-var svgDrawn;
+const [svgDrawn, setSVG] = useState();
 
 async function getMinted() {
     const provider = new ethers.providers.Web3Provider(ethereum);
     contract = new ethers.Contract(godAddress, god.abi, provider);
-    return contract.minted();
+    return await contract.minted();
     //return amount;
 
 }
 
-async function getSVG(token) {
+async function getSVG() {
 
-    const provider = new ethers.providers.Web3Provider(ethereum)
+    const provider = new ethers.providers.Web3Provider(ethereum);
     contract = new ethers.Contract(traitAddress, traits.abi, provider);
-    svgDrawn = contract.drawSVG(token);
+    return await contract.drawSVG(3);
 }
 const DisplayNFT = () =>{
-    
-    const [state, setState] = useState({ x: getMinted()});
-    //console.log(getMinted());
+    var tokenId;
+    setState(getSVG());
     return (
         <div>
-        ({state.x})
-        <Slider axis="x" x={state.x} onChange={setState} />
+        <a> 
+        </a>
+        
       </div>
 
     
