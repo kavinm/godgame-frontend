@@ -111,7 +111,11 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 46px;
+  padding: 0px 120px;
+  border-radius: 25px;
   /* or 258% */
+  text-decoration: none;
+  display: inline-block;
 
   display: flex;
   align-items: center;
