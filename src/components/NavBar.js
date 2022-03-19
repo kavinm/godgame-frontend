@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import { useToast, Text } from "@chakra-ui/react";
+import React, { useState } from "react";
 import "./NavBar.css";
 import "./AboutComponent.js";
-import { FaDiscord, FaTwitter } from "react-icons/fa";
+import { FaBalanceScaleRight, FaDiscord, FaTwitter } from "react-icons/fa";
 import AboutComponent from "./AboutComponent.js";
 import { Link } from "react-router-dom";
 
@@ -20,7 +21,34 @@ function scrollFunction() {
   );
 }
 
-const NavBar = () => {
+const NavBar = (props) => {
+  const toast = useToast();
+  const { ethereum } = window;
+  const [isWalletConnected, setIsWalletConnected] = useState(false);
+  const [currentAccount, setCurrentAccount] = useState("");
+
+  const connectWallet = async () => {
+    const accounts = await ethereum.request({
+      method: "eth_requestAccounts",
+    });
+
+    if (accounts[0]) {
+      toast({
+        description: (
+          <Text fontSize="xs" className="plex">
+            Metamask is connected.
+          </Text>
+        ),
+        status: "success",
+        duration: 2000,
+        isClosable: true,
+      });
+      setCurrentAccount(accounts[0]);
+    }
+    setIsWalletConnected(true);
+    props.stateChanger(() => true);
+  };
+
   return (
     <div className="header">
       <div className="logo">
@@ -29,9 +57,7 @@ const NavBar = () => {
       <div>
         <ul>
           <div className="middleBar">
-
             <button className="button1">About</button>
-            <Link to="/displayNFT">View NFT</Link>
 
             <a href="https://medium.com/@metisgodgame">
               <button className="button3"> Whitepaper</button>
@@ -64,8 +90,16 @@ const NavBar = () => {
                   />
                 </svg>
               </div>
-              <div className="layer2">
-                <a>Connect Wallet</a>
+              <div className="layer2" onClick={() => connectWallet()}>
+                {isWalletConnected ? (
+                  <p>
+                    {currentAccount.substring(0, 6) +
+                      "..." +
+                      currentAccount.substring(38, 42)}
+                  </p>
+                ) : (
+                  <div>Connect Wallet</div>
+                )}
               </div>
             </div>
           </li>

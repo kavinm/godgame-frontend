@@ -1,7 +1,56 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./LandingComponent.css";
 
-const LandingComponent = () => {
+import god from "./utils/God.json";
+const ethers = require("ethers");
+const godAddress = "0x66A7De7572B70850BB6cC0a5DFf03dD3E93E1da6";
+const { ethereum } = window;
+
+async function getMinted() {
+  const provider = new ethers.providers.Web3Provider(ethereum);
+  const contract = new ethers.Contract(godAddress, god.abi, provider);
+  return contract.minted();
+}
+
+const LandingComponent = (props) => {
+  const [minted, setMinted] = useState(0);
+
+  useEffect(() => {
+    getMinted().then((res) => {
+      console.log("res is " + res);
+      setMinted(res);
+    });
+  }, []);
+
+  const MintDetails = () => {
+    console.log(props.isWalletConnected);
+    return (
+      <div class="flex-container">
+        <div class="flex-child number_of_mints">{2222 - minted}/ 2222 left</div>
+        <div class="flex-child green">
+          <div className="container_row">
+            <div className="layer1">
+              <svg
+                width="277"
+                height="45"
+                viewBox="0 0 277 45"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15.5 6V0H262.5V6H270.5V16H277V29H270.5V39H262.5V45H15.5V39H8V28.5H0V15.5H8V6H15.5Z"
+                  fill="#FFC545"
+                />
+              </svg>
+            </div>
+            <div className="layer2">
+              <a className="connect_to_wallet"> Mint</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div>
       <div class="the_container">
@@ -16,29 +65,8 @@ const LandingComponent = () => {
             God Game is an orginal NFT project launching on <br />
             the METIS Blockchain. Minting Coming Soon
           </p>
-          <div class="flex-container">
-            <div class="flex-child number_of_mints">0/2222 Minted</div>
-            <div class="flex-child green">
-              <div className="container_row">
-                <div className="layer1">
-                  <svg
-                    width="277"
-                    height="45"
-                    viewBox="0 0 277 45"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M15.5 6V0H262.5V6H270.5V16H277V29H270.5V39H262.5V45H15.5V39H8V28.5H0V15.5H8V6H15.5Z"
-                      fill="#FFC545"
-                    />
-                  </svg>
-                </div>
-                <div className="layer2">
-                  <a className="connect_to_wallet"> Coming Soon</a>
-                </div>
-              </div>
-            </div>
-          </div>
+
+          {props.isWalletConnected ? <MintDetails /> : <div></div>}
         </div>
         <img src="./God_on_Pillar.png" className="pillar" alt="Background" />
       </div>
