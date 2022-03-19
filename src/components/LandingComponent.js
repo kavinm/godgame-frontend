@@ -5,6 +5,7 @@ import god from "./utils/God.json";
 const ethers = require("ethers");
 const godAddress = "0x66A7De7572B70850BB6cC0a5DFf03dD3E93E1da6";
 const { ethereum } = window;
+const MINT_PRICE = 0.00001;
 
 async function getMinted() {
   const provider = new ethers.providers.Web3Provider(ethereum);
@@ -13,8 +14,18 @@ async function getMinted() {
 }
 
 async function mint(mintNum) {
-  const provider = new ethers.providers.Web3Provider(ethereum);
-  const contract = new ethers.Contract(godAddress, god.abi, provider);
+  if (ethereum) {
+    const provider = new ethers.providers.Web3Provider(ethereum);
+    const signer = provider.getSigner();
+    const connectedContract = new ethers.Contract(godAddress, god.abi, signer);
+
+    const totalPrice = String(MINT_PRICE * mintNum);
+    const ethersValue = { value: ethers.utils.parseEther(totalPrice) };
+
+    const nftTxn = await connectedContract.mint(mintNum, false, ethersValue);
+
+    await nftTxn.wait();
+  }
 }
 
 const LandingComponent = (props) => {
@@ -48,7 +59,10 @@ const LandingComponent = (props) => {
               </svg>
             </div>
             <div className="layer2">
-              <a className="connect_to_wallet"> Mint</a>
+              <a className="connect_to_wallet" onClick={() => mint(1)}>
+                {" "}
+                Mint
+              </a>
             </div>
           </div>
         </div>
