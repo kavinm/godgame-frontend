@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./displayNFT.css";
 import traits from "./utils/Traits.json";
 import Slider from "react-input-slider";
@@ -10,40 +10,36 @@ const traitAddress = "0x8Fad2dD108e3dC171E8271CDF8B9EA768260Ea5f";
 const godAddress = "0x66A7De7572B70850BB6cC0a5DFf03dD3E93E1da6";
 const { ethereum } = window;
 
+async function getMinted() {
+  const provider = new ethers.providers.Web3Provider(ethereum);
+  contract = new ethers.Contract(godAddress, god.abi, provider);
+  return contract.minted();
+  //return amount;
+}
 
- async function getMinted() {
-   const provider = new ethers.providers.Web3Provider(ethereum);
-   contract = new ethers.Contract(godAddress, god.abi, provider);
-   return contract.minted();
-   //return amount;
- }
-
- async function getSVG(num) {
-    const provider = new ethers.providers.Web3Provider(ethereum);
-    contract = new ethers.Contract(traitAddress, traits.abi, provider);
-    return contract.drawSVG(num);
- }
+async function getSVG(num) {
+  const provider = new ethers.providers.Web3Provider(ethereum);
+  contract = new ethers.Contract(traitAddress, traits.abi, provider);
+  return contract.drawSVG(num);
+}
 const DisplayNFT = () => {
-<<<<<<< HEAD
-    const [svgDrawn, setSVG] = useState({svg: ''});
-    useEffect(() => {
-            getSVG().then((res) =>{
-          setSVG(getSVG(5));
-        });
-    })
-    console.log("svg: ", getSVG(3));
-    setSVG(5);
-    console.log("draw: ", svgDrawn);
+  const [svgDrawn, setSVG] = useState({ svg: "" });
+  useEffect(() => {
+    getSVG().then((res) => {
+      setSVG(getSVG(5));
+    });
+  });
+  console.log("svg: ", getSVG(3));
+  setSVG(5);
+  console.log("draw: ", svgDrawn);
   //console.log(getMinted());
-    return (
-    <div>CHUNGUS
-        <img src={svgDrawn}/>
-
+  return (
+    <div>
+      CHUNGUS
+      <img src={svgDrawn} />
     </div>
-        
-        
-        );
-=======
+  );
+
   const [viewNfts, setViewNfts] = useState(false);
 
   let [ownedSvgs, setOwnedSvgs] = useState([{ svg: "", token_id: 0 }]);
@@ -112,17 +108,14 @@ const DisplayNFT = () => {
         View
       </button>
 
-<<<<<<< HEAD
       {ownedSvgs.map((token) => {
         return <img key={token.token_id} src={token.svg}></img>;
       })}
     </div>
   );
-=======
+
   //     {viewNfts && (<img src={ownedSvgs[8].svg}></img>)}
   //   </div>
   // );
->>>>>>> a7873796a7f0a50f042d87f0639287b4a8319e19
->>>>>>> f5097b5f499cb8929a24b8bacc3bdaf4d7f7ff0d
 };
 export default DisplayNFT;
