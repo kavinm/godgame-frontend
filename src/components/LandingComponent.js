@@ -19,8 +19,10 @@ async function mint(mintNum) {
     const signer = provider.getSigner();
     const connectedContract = new ethers.Contract(godAddress, god.abi, signer);
 
-    const totalPrice = String(MINT_PRICE * mintNum);
+    const totalPrice = String(MINT_PRICE * mintNum).substring(0, 8);
+    console.log(totalPrice);
     const ethersValue = { value: ethers.utils.parseEther(totalPrice) };
+    console.log(ethersValue);
 
     const nftTxn = await connectedContract.mint(mintNum, false, ethersValue);
 
@@ -39,7 +41,7 @@ const LandingComponent = (props) => {
   }, []);
 
   const increment = () => {
-    setMintAmount(mintAmount + 1);
+    if (mintAmount < 22) setMintAmount(mintAmount + 1);
   };
   const decrement = () => {
     if (mintAmount > 1) setMintAmount(mintAmount - 1);
@@ -61,7 +63,6 @@ const LandingComponent = (props) => {
                 <button
                   className="connect_to_wallet"
                   onClick={() => mint(mintAmount)}>
-                  {" "}
                   Mint: {mintAmount}
                 </button>
               </div>
