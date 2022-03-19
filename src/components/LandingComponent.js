@@ -42,7 +42,7 @@ const LandingComponent = (props) => {
     setMintAmount(mintAmount + 1);
   };
   const decrement = () => {
-    setMintAmount(mintAmount - 1);
+    if (mintAmount > 1) setMintAmount(mintAmount - 1);
   };
 
   const MintDetails = () => {
@@ -54,23 +54,28 @@ const LandingComponent = (props) => {
         </div>
         <div class="flex-child green">
           <div className="container_row">
-            <div className="layer1">
-              
-            </div>
-            
+            <div className="layer1"></div>
+
             <div className="layer2">
-             <div className= "container">
-                <a className="connect_to_wallet" onClick={() => mint(mintAmount)}>
+              <div className="container">
+                <a
+                  className="connect_to_wallet"
+                  onClick={() => mint(mintAmount)}>
                   {" "}
                   Mint: {mintAmount}
                 </a>
-                
               </div>
-              
-                <div className= "buttons">
-                  <button className="increment" onClick={() => increment()}> +  </button>
-                  <button className="decrement" onClick={() => decrement()}>  — </button>
-                </div>
+
+              <div className="buttons">
+                <button className="increment" onClick={() => increment()}>
+                  {" "}
+                  +{" "}
+                </button>
+                <button className="decrement" onClick={() => decrement()}>
+                  {" "}
+                  —{" "}
+                </button>
+              </div>
             </div>
           </div>
         </div>

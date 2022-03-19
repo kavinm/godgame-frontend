@@ -12,6 +12,7 @@ var script = document.createElement("script");
 script.src = "https://code.jquery.com/jquery-3.6.0.min.js";
 script.type = "text/javascript";
 document.getElementsByTagName("head")[0].appendChild(script);
+const CORRECT_CHAIN_ID = "0x24c";
 
 function scrollFunction() {
   "html,body".animate(
@@ -32,12 +33,16 @@ const NavBar = (props) => {
     const accounts = await ethereum.request({
       method: "eth_requestAccounts",
     });
+    const chainId = await ethereum.request({ method: "eth_chainId" });
+    console.log(chainId);
 
-    if (accounts[0]) {
+    if (accounts[0] && chainId == CORRECT_CHAIN_ID) {
       setCurrentAccount(accounts[0]);
+      setIsWalletConnected(true);
+      props.stateChanger(() => true);
+    } else if (chainId != CORRECT_CHAIN_ID) {
+      alert("Wrong network! Please connect to Metis Andromeda");
     }
-    setIsWalletConnected(true);
-    props.stateChanger(() => true);
   };
   const history = useHistory();
   const goBack = () => {
@@ -47,8 +52,9 @@ const NavBar = (props) => {
   return (
     <div className="header">
       <div className="logo">
-
-        <button className = "title" onClick={goBack}>GOD GAME</button
+        <button className="title" onClick={goBack}>
+          GOD GAME
+        </button>
       </div>
       <div>
         <ul>
