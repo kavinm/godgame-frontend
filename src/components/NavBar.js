@@ -1,8 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import { useToast, Text } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import "./NavBar.css";
 import "./AboutComponent.js";
-import { FaDiscord, FaTwitter } from "react-icons/fa";
+import { FaBalanceScaleRight, FaDiscord, FaTwitter } from "react-icons/fa";
 import AboutComponent from "./AboutComponent.js";
 import { Link } from "react-router-dom";
 
@@ -10,6 +12,7 @@ var script = document.createElement("script");
 script.src = "https://code.jquery.com/jquery-3.6.0.min.js";
 script.type = "text/javascript";
 document.getElementsByTagName("head")[0].appendChild(script);
+const CORRECT_CHAIN_ID = "0x440";
 
 function scrollFunction() {
   "html,body".animate(
@@ -20,18 +23,49 @@ function scrollFunction() {
   );
 }
 
-const NavBar = () => {
+const NavBar = (props) => {
+  const toast = useToast();
+  const { ethereum } = window;
+  const [isWalletConnected, setIsWalletConnected] = useState(false);
+  const [currentAccount, setCurrentAccount] = useState("");
+
+  const connectWallet = async () => {
+    const accounts = await ethereum.request({
+      method: "eth_requestAccounts",
+    });
+    const chainId = await ethereum.request({ method: "eth_chainId" });
+    console.log(chainId);
+
+    if (accounts[0] && chainId == CORRECT_CHAIN_ID) {
+      setCurrentAccount(accounts[0]);
+      setIsWalletConnected(true);
+      props.stateChanger(() => true);
+    } else if (chainId != CORRECT_CHAIN_ID) {
+      alert("Wrong network! Please connect to Metis Andromeda");
+    }
+  };
+  const history = useHistory();
+  const goBack = () => {
+    history.push("/");
+  };
+
   return (
     <div className="header">
       <div className="logo">
-        <a>GOD GAME</a>
+        <button className="title" onClick={goBack}>
+          GOD GAME
+        </button>
       </div>
       <div>
         <ul>
           <div className="middleBar">
+            <a href="/faq">
+              <button className="button1">FAQ</button>
+            </a>
 
-            <button className="button1">About</button>
-            <button className="button2">Stake</button>
+            <a href="/displaynft">
+              <button className="button2">View NFT</button>
+            </a>
 
             <a href="https://medium.com/@metisgodgame">
               <button className="button3"> Whitepaper</button>
@@ -64,8 +98,16 @@ const NavBar = () => {
                   />
                 </svg>
               </div>
-              <div className="layer2">
-                <a>Connect Wallet</a>
+              <div className="layer2" onClick={() => connectWallet()}>
+                {isWalletConnected ? (
+                  <p>
+                    {currentAccount.substring(0, 6) +
+                      "..." +
+                      currentAccount.substring(38, 42)}
+                  </p>
+                ) : (
+                  <div>Connect Wallet</div>
+                )}
               </div>
             </div>
           </li>
