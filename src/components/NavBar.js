@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useToast, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
-import {useHistory } from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 import "./NavBar.css";
 import "./AboutComponent.js";
 import { FaBalanceScaleRight, FaDiscord, FaTwitter } from "react-icons/fa";
@@ -22,7 +22,6 @@ function scrollFunction() {
   );
 }
 
-
 const NavBar = (props) => {
   const toast = useToast();
   const { ethereum } = window;
@@ -35,41 +34,31 @@ const NavBar = (props) => {
     });
 
     if (accounts[0]) {
-      toast({
-        description: (
-          <Text fontSize="xs" className="plex">
-            Metamask is connected.
-          </Text>
-        ),
-        status: "success",
-        duration: 2000,
-        isClosable: true,
-      });
       setCurrentAccount(accounts[0]);
     }
     setIsWalletConnected(true);
     props.stateChanger(() => true);
   };
-  const history = useHistory()
+  const history = useHistory();
   const goBack = () => {
-    history.push('/')
-  }
+    history.push("/");
+  };
 
   return (
     <div className="header">
       <div className="logo">
-        <button className = "title" onClick={goBack}>GOD GAME</button>
+
+        <button className = "title" onClick={goBack}>GOD GAME</button
       </div>
       <div>
         <ul>
           <div className="middleBar">
-
-          <a href = "/faq">
-              <button className = "button1">FAQ</button>
+            <a href="/faq">
+              <button className="button1">FAQ</button>
             </a>
-            
-            <a href = "/displaynft">
-              <button className = "button2">View NFT</button>
+
+            <a href="/displaynft">
+              <button className="button2">View NFT</button>
             </a>
 
             <a href="https://medium.com/@metisgodgame">

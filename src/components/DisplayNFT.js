@@ -22,7 +22,7 @@ var svgDrawn;
 
 // async function getSVG(token) {
 //   const provider = new ethers.providers.Web3Provider(ethereum);
-//   contract = new ethers.Contract(traitAddress, traits.abi, provider);
+//   contract = new ethers.Contract(traitAddress,traits.abi, provider);
 //   svgDrawn = await contract.drawSVG(token);
 // }
 const DisplayNFT = () => {
