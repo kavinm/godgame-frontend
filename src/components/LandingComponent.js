@@ -58,12 +58,12 @@ const LandingComponent = (props) => {
 
             <div className="layer2">
               <div className="container">
-                <a
+                <button
                   className="connect_to_wallet"
                   onClick={() => mint(mintAmount)}>
                   {" "}
                   Mint: {mintAmount}
-                </a>
+                </button>
               </div>
 
               <div className="buttons">
