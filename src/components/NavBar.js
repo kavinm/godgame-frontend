@@ -47,9 +47,8 @@ const NavBar = (props) => {
   return (
     <div className="header">
       <div className="logo">
-        <a className="title" onClick={goBack}>
-          GOD GAME
-        </a>
+
+        <button className = "title" onClick={goBack}>GOD GAME</button
       </div>
       <div>
         <ul>
