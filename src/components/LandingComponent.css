@@ -127,6 +127,7 @@
   padding: 0px 120px;
   border-radius: 30px/90px;
   /* or 258% */
+  border:none;
   text-decoration: none;
   display: inline-flex;
   
