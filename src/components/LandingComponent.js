@@ -95,8 +95,8 @@ const LandingComponent = (props) => {
         <div className="centered">
           <h1 className="main_title">GOD GAME</h1>
           <p className="subtitle">
-            God Game is an orginal NFT project launching on <br />
-            the METIS Blockchain. Minting Coming Soon
+            God Game is an orginal NFT project on <br />
+            the METIS Blockchain. Minting now live!
           </p>
 
           {props.isWalletConnected ? <MintDetails /> : <div></div>}

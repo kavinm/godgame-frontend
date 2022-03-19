@@ -55,8 +55,8 @@ const RoadMap = () => {
               <div className="details-paragraph">
                 <ul>
                   <li>Staking/Unstaking is enabled</li>
-                  <li>Minting is now possible only with $$FAITH</li>
-                  <li>Holder's will be rewarded</li>
+                  <li>Minting is now possible only with $FAITH</li>
+                  <li>Holders will be rewarded</li>
                   <li>Stealing Mechanics are live</li>
                 </ul>
               </div>
@@ -79,7 +79,7 @@ const RoadMap = () => {
                   <li>Faith token generation stopped</li>
 
                   <li>
-                   Supply is capped and ownership of contract is renounced
+                    Supply is capped and ownership of contract is renounced
                   </li>
                 </ul>
               </div>
