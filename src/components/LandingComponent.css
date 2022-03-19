@@ -2,6 +2,12 @@
   font-family: 'PixelSplitter';
   src: url('./font/PixelSplitter-Bold.ttf');
 }
+.connect_to_wallet:hover{
+
+  background-color: black;
+  padding: 0px 100px;
+
+}
 .first_layer {
   background-image: url('../../public/Hero_Background.png');
   background-size: contain;
