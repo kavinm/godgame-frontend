@@ -133,3 +133,8 @@
 .logo a {
   color: #ffc545;
 }
+.title:hover {
+  padding: 10px 5px;
+  background-color: #ffc545;
+  color: white;
+}
