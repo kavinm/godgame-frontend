@@ -3,7 +3,7 @@ import "./LandingComponent.css";
 
 import god from "./utils/God.json";
 const ethers = require("ethers");
-const godAddress = "0x66A7De7572B70850BB6cC0a5DFf03dD3E93E1da6";
+const godAddress = "0x84fCDA341B8d76A70E978b3259e79d146995fc20";
 const { ethereum } = window;
 const MINT_PRICE = 0.00001;
 
