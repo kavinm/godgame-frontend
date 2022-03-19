@@ -115,7 +115,11 @@ const DisplayNFT = () => {
       </button>
 
       {ownedSvgs.map((token) => {
-        return <img key={token.token_id} src={token.svg}></img>;
+        return (<div className= "disp"><div className="tokenId">
+       Token ID: {ethers.BigNumber.from(token.token_id).toString()}</div> <img className= "yours" key={token.token_id} src={token.svg}></img>
+        {console.log(token.token_id)}
+        </div>
+            );
       })}
       <img
         src="./Hero_Background.png"
