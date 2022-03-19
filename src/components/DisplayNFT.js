@@ -130,7 +130,8 @@ const DisplayNFT = () => {
         return (<div className= "disp"><div className="tokenId">
        {isWalletConnected ? 
        (<a>Token ID: {ethers.BigNumber.from(token.token_id).toString()}</a> ) 
-       :<> {isClicked && isNFT ? (<p>Loading...</p>):(<p>Check Wallet Network!</p>)}</>}
+       :<> {isClicked ? <>{isNFT ?(<p>Loading...</p>):(<p>No NFTs to display!</p>) }</> : (<p>Double Check Network!</p>)
+       }</>}
        </div> <img className= "yours" key={token.token_id} src={token.svg}></img>
        
         {console.log(token.token_id)}
