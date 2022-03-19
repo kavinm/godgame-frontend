@@ -45,9 +45,9 @@
 }
 .disp{
     display:inline-block;
-    padding-left:10;
+    padding-left:130px;
     font-family: "PixelSplitter", sans-serif;
-    padding-right: 30px;
+   
     position:center;
     color: wheat;
 }

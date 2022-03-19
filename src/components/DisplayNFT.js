@@ -27,8 +27,12 @@ var svgDrawn;
 // }
 const DisplayNFT = () => {
   const [viewNfts, setViewNfts] = useState(false);
-
+  const [isWalletConnected, setIsWalletConnected] = useState(false);
   let [ownedSvgs, setOwnedSvgs] = useState([{ svg: "", token_id: 0 }]);
+  function UserGreeting(props) {
+    return <h1>Welcome back!</h1>;
+  }
+  
 
   const returnTokenSvgs = async () => {
     const tokenIds = [];
@@ -108,6 +112,7 @@ const DisplayNFT = () => {
         className="viewNFT"
         onClick={async () => {
           setViewNfts(true);
+          setIsWalletConnected(true);
           const heldTokens = await returnTokenSvgs(currentAccount);
           setOwnedSvgs(heldTokens);
         }}>
@@ -116,7 +121,10 @@ const DisplayNFT = () => {
 
       {ownedSvgs.map((token) => {
         return (<div className= "disp"><div className="tokenId">
-       Token ID: {ethers.BigNumber.from(token.token_id).toString()}</div> <img className= "yours" key={token.token_id} src={token.svg}></img>
+       {isWalletConnected ? 
+       (<a>Token ID: {ethers.BigNumber.from(token.token_id).toString()}</a> ) 
+       : (<p>Connect Your Wallet!</p>)}</div> 
+       <img className= "yours" key={token.token_id} src={token.svg}></img>
         {console.log(token.token_id)}
         </div>
             );
