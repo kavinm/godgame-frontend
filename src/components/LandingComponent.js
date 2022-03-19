@@ -12,6 +12,11 @@ async function getMinted() {
   return contract.minted();
 }
 
+async function mint(mintNum) {
+  const provider = new ethers.providers.Web3Provider(ethereum);
+  const contract = new ethers.Contract(godAddress, god.abi, provider);
+}
+
 const LandingComponent = (props) => {
   const [minted, setMinted] = useState(0);
 

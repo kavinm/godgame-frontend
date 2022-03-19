@@ -82,17 +82,21 @@ const DisplayNFT = () => {
     return tokenSvgs;
   };
 
-  // return (
-  //   <div>
-  //     <button
-  //       onClick={async () => {
-  //         setViewNfts(true);
-  //         const heldTokens = await returnTokenSvgs(currentAccount);
-  //         setOwnedSvgs(heldTokens);
-  //       }}></button>
+  return (
+    <div>
+      <button
+        onClick={async () => {
+          setViewNfts(true);
+          const heldTokens = await returnTokenSvgs(currentAccount);
+          setOwnedSvgs(heldTokens);
+        }}>
+        View
+      </button>
 
-  //     {viewNfts && (<img src={ownedSvgs[8].svg}></img>)}
-  //   </div>
-  // );
+      {ownedSvgs.map((token) => {
+        return <img key={token.token_id} src={token.svg}></img>;
+      })}
+    </div>
+  );
 };
 export default DisplayNFT;
