@@ -6,7 +6,7 @@ const RoadMap = () => {
     <div className="the_container">
       <img src="/Roadmap White Seciton.svg" alt="white background" />
       <div className="centered_roadmap">
-        <h1>THE ROADMAP</h1>
+        <h1>THE PHASES</h1>
         <div className="flex-container-roadmap">
           <div class="flex-child-roadmap">
             <div className="blue_box centered">
@@ -56,6 +56,7 @@ const RoadMap = () => {
                 <ul>
                   <li>Staking/Unstaking is enabled</li>
                   <li>Minting is now possible only with $$FAITH</li>
+                  <li>Holder's will be rewarded</li>
                   <li>Stealing Mechanics are live</li>
                 </ul>
               </div>
@@ -78,8 +79,7 @@ const RoadMap = () => {
                   <li>Faith token generation stopped</li>
 
                   <li>
-                    Faith becomes a meme token with no utility, <br /> supply is
-                    capped and ownership of contract is renounced
+                   Supply is capped and ownership of contract is renounced
                   </li>
                 </ul>
               </div>
