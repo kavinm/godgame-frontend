@@ -3,9 +3,9 @@ import "./LandingComponent.css";
 
 import god from "./utils/God.json";
 const ethers = require("ethers");
-const godAddress = "0x84fCDA341B8d76A70E978b3259e79d146995fc20";
+const godAddress = "0xa43fA0eEB4c18fb863a6e916a1eF00c201ce16f7";
 const { ethereum } = window;
-const MINT_PRICE = 0.00001;
+const MINT_PRICE = 0.69;
 
 async function getMinted() {
   const provider = new ethers.providers.Web3Provider(ethereum);

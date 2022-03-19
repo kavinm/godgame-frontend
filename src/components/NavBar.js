@@ -12,7 +12,7 @@ var script = document.createElement("script");
 script.src = "https://code.jquery.com/jquery-3.6.0.min.js";
 script.type = "text/javascript";
 document.getElementsByTagName("head")[0].appendChild(script);
-const CORRECT_CHAIN_ID = "0x24c";
+const CORRECT_CHAIN_ID = "0x440";
 
 function scrollFunction() {
   "html,body".animate(

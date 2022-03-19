@@ -8,7 +8,7 @@ const ethers = require("ethers");
 
 let contract;
 const traitAddress = "0x8Fad2dD108e3dC171E8271CDF8B9EA768260Ea5f";
-const godAddress = "0x84fCDA341B8d76A70E978b3259e79d146995fc20";
+const godAddress = "0xa43fA0eEB4c18fb863a6e916a1eF00c201ce16f7";
 const { ethereum } = window;
 let currentAccount;
 var svgDrawn;
