@@ -133,6 +133,17 @@
 .logo a {
   color: #ffc545;
 }
+.title{
+  background-color: black;
+  font-family: "PixelSplitter", sans-serif;
+  border: none;
+  color: white;
+  padding: 10px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 .title:hover {
   padding: 10px 5px;
   background-color: #ffc545;

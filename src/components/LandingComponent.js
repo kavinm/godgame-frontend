@@ -55,26 +55,23 @@ const LandingComponent = (props) => {
         <div class="flex-child green">
           <div className="container_row">
             <div className="layer1">
-              <svg
-                width="277"
-                height="45"
-                viewBox="0 0 277 45"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M15.5 6V0H262.5V6H270.5V16H277V29H270.5V39H262.5V45H15.5V39H8V28.5H0V15.5H8V6H15.5Z"
-                  fill="#FFC545"
-                />
-              </svg>
+              
             </div>
+            
             <div className="layer2">
-              <a className="connect_to_wallet" onClick={() => mint(mintAmount)}>
-                {" "}
-                Mint : {mintAmount}
-              </a>
+             <div className= "container">
+                <a className="connect_to_wallet" onClick={() => mint(mintAmount)}>
+                  {" "}
+                  Mint: {mintAmount}
+                </a>
+                
+              </div>
+              
+                <div className= "buttons">
+                  <button className="increment" onClick={() => increment()}> +  </button>
+                  <button className="decrement" onClick={() => decrement()}>  — </button>
+                </div>
             </div>
-            <a onClick={() => increment()}>+</a>
-            <a onClick={() => decrement()}>-</a>
           </div>
         </div>
       </div>
