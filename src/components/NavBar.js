@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useToast, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
+import {useHistory } from 'react-router-dom'
 import "./NavBar.css";
 import "./AboutComponent.js";
 import { FaBalanceScaleRight, FaDiscord, FaTwitter } from "react-icons/fa";
@@ -20,6 +21,7 @@ function scrollFunction() {
     "slow"
   );
 }
+
 
 const NavBar = (props) => {
   const toast = useToast();
@@ -48,16 +50,27 @@ const NavBar = (props) => {
     setIsWalletConnected(true);
     props.stateChanger(() => true);
   };
+  const history = useHistory()
+  const goBack = () => {
+    history.push('/')
+  }
 
   return (
     <div className="header">
       <div className="logo">
-        <a>GOD GAME</a>
+        <a className = "title" onClick={goBack}>GOD GAME</a>
       </div>
       <div>
         <ul>
           <div className="middleBar">
-            <button className="button1">About</button>
+
+          <a href = "/faq">
+              <button className = "button1">FAQ</button>
+            </a>
+            
+            <a href = "/displaynft">
+              <button className = "button2">View NFT</button>
+            </a>
 
             <a href="https://medium.com/@metisgodgame">
               <button className="button3"> Whitepaper</button>

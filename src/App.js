@@ -20,25 +20,30 @@ function App() {
 
   return (
     <div>
-      {/* <BrowserRouter> */}
+      <BrowserRouter> 
       <div>
-        <DisplayNFT />
 
         <NavBar stateChanger={setIsWalletConnected} />
 
-        {/* <Switch>
+         <Switch>
             <Route exact path="/displaynft">
-              {" "}
               <DisplayNFT/>
             </Route>
-          </Switch>  */}
-        <LandingComponent isWalletConnected={isWalletConnected} />
-        <AboutComponent />
+          </Switch> 
+          <Switch>
+            <Route exact path ="/faq">
+            <FaqPage />
+            </Route>
+          </Switch> 
+        <Route exact path = "/">
+          <LandingComponent isWalletConnected={isWalletConnected} />
+          <AboutComponent/>
         <SampleMints />
         <RoadMap />
         <FaqPage />
+        </Route>
       </div>
-      {/* // </BrowserRouter> */}
+     </BrowserRouter> 
     </div>
   );
 }

@@ -1,0 +1,39 @@
+
+.pg{
+    background-color: black;
+    position: relative;
+
+}
+.backB{
+    background-color: black;
+    font-family: "PixelSplitter", sans-serif;
+    border: none;
+    color: goldenrod;
+    padding: 15px 50px;
+    padding-left: 100px;
+    padding-right:100px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+}
+.backB:hover {
+    background-color: goldenrod;
+    color: white;
+  }
+
+.viewNFT{
+    background-color: black;
+  font-family: "PixelSplitter", sans-serif;
+  border: none;
+  color: goldenrod;
+  padding: 15px 50px;
+  text-align: center;
+  margin:auto;
+  display:block;
+  text-decoration: none;
+  font-size: 30px;
+}
+.viewNFT:hover {
+    background-color: goldenrod;
+    color: white;
+  }

@@ -29,20 +29,29 @@ async function mint(mintNum) {
 }
 
 const LandingComponent = (props) => {
-  const [minted, setMinted] = useState(0);
-
+  const [mintAmount, setMintAmount] = useState(1);
+  const [mintCount, setMintCount] = useState(0);
   useEffect(() => {
     getMinted().then((res) => {
       console.log("res is " + res);
-      setMinted(res);
+      setMintCount(res);
     });
   }, []);
+
+  const increment = () => {
+    setMintAmount(mintAmount + 1);
+  };
+  const decrement = () => {
+    setMintAmount(mintAmount - 1);
+  };
 
   const MintDetails = () => {
     console.log(props.isWalletConnected);
     return (
       <div class="flex-container">
-        <div class="flex-child number_of_mints">{2222 - minted}/ 2222 left</div>
+        <div class="flex-child number_of_mints">
+          {2222 - mintCount}/ 2222 left
+        </div>
         <div class="flex-child green">
           <div className="container_row">
             <div className="layer1">
@@ -59,11 +68,13 @@ const LandingComponent = (props) => {
               </svg>
             </div>
             <div className="layer2">
-              <a className="connect_to_wallet" onClick={() => mint(1)}>
+              <a className="connect_to_wallet" onClick={() => mint(mintAmount)}>
                 {" "}
-                Mint
+                Mint : {mintAmount}
               </a>
             </div>
+            <a onClick={() => increment()}>+</a>
+            <a onClick={() => decrement()}>-</a>
           </div>
         </div>
       </div>

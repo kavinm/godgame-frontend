@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import "./displayNFT.css";
 import traits from "./utils/Traits.json";
 import Slider from "react-input-slider";
@@ -81,21 +82,46 @@ const DisplayNFT = () => {
     );
     return tokenSvgs;
   };
+  const history = useHistory();
+  const goBack = () => {
+    history.push("/");
+  };
 
   return (
-    <div>
+    <div className="pg">
       <button
+        className="backB"
+        backgroundColor="#0B3748"
+        _hover={{
+          backgroundColor: "#0e445a",
+        }}
+        _active={{
+          backgroundColor: "#0B3748",
+        }}
+        fontWeight={400}
+        minW="100px"
+        mr="90px"
+        onClick={goBack}>
+        {"< Back"}
+      </button>
+      <button
+        className="viewNFT"
         onClick={async () => {
           setViewNfts(true);
           const heldTokens = await returnTokenSvgs(currentAccount);
           setOwnedSvgs(heldTokens);
         }}>
-        View
+        View Your NFTs !
       </button>
 
       {ownedSvgs.map((token) => {
         return <img key={token.token_id} src={token.svg}></img>;
       })}
+      <img
+        src="./Hero_Background.png"
+        alt="Background"
+        style={{ width: "100%", zIndex: 2 }}
+      />
     </div>
   );
 };
