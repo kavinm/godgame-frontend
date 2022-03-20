@@ -12,6 +12,7 @@ const godAddress = "0xa43fA0eEB4c18fb863a6e916a1eF00c201ce16f7";
 const { ethereum } = window;
 let currentAccount;
 var svgDrawn;
+const CORRECT_CHAIN_ID = "0x440";
 
 // async function getMinted() {
 //   const provider = new ethers.providers.Web3Provider(ethereum);
@@ -27,8 +28,14 @@ var svgDrawn;
 // }
 const DisplayNFT = () => {
   const [viewNfts, setViewNfts] = useState(false);
-
+  const [isClicked, setClicked] = useState(false);
+  const [isNFT, setNFT] = useState(false);
+  const [isWalletConnected, setIsWalletConnected] = useState(false);
   let [ownedSvgs, setOwnedSvgs] = useState([{ svg: "", token_id: 0 }]);
+  function UserGreeting(props) {
+    return <h1>Welcome back!</h1>;
+  }
+  
 
   const returnTokenSvgs = async () => {
     const tokenIds = [];
@@ -50,6 +57,9 @@ const DisplayNFT = () => {
       const ownedTokenAmount = await connectedContract.balanceOf(
         currentAccount
       );
+      if (ownedTokenAmount > 0){
+          setNFT(true);
+      }
       console.log(ownedTokenAmount);
 
       for (let i = 0; i < ownedTokenAmount; i += 1) {
@@ -107,15 +117,27 @@ const DisplayNFT = () => {
       <button
         className="viewNFT"
         onClick={async () => {
-          setViewNfts(true);
+          setViewNfts(true)
+          setClicked(true)
           const heldTokens = await returnTokenSvgs(currentAccount);
+          setIsWalletConnected(true);
           setOwnedSvgs(heldTokens);
         }}>
         View Your NFTs !
       </button>
 
       {ownedSvgs.map((token) => {
-        return <img key={token.token_id} src={token.svg}></img>;
+        return (<div className= "disp"><div className="tokenId">
+       {isWalletConnected ? 
+       (<a>Token ID: {ethers.BigNumber.from(token.token_id).toString()}</a> ) 
+       :<> {isClicked ? <>{isNFT ?(<p>Loading...</p>):(<p>No NFTs to display!</p>) }</> : (<p>Double Check Network!</p>)
+       }</>}
+       </div> <img className= "yours" key={token.token_id} src={token.svg}></img>
+       
+        {console.log(token.token_id)}
+        </div>
+        
+            );
       })}
       <img
         src="./Hero_Background.png"

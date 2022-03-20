@@ -39,3 +39,17 @@
     color: goldenrod;
     
   }
+.yours{
+    display:inline-flex;
+    width:300px;
+    position:center;
+    
+}
+.disp{
+    display:inline-block;
+    padding-left:130px;
+    font-family: "PixelSplitter", sans-serif;
+   
+    position:center;
+    color: wheat;
+}
