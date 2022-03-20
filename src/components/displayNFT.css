@@ -21,19 +21,21 @@
     color: white;
   }
 
-.viewNFT{
-    background-color: black;
+  .viewNFT{
+  background-color: goldenrod;
   font-family: "PixelSplitter", sans-serif;
-  border: none;
-  color: goldenrod;
+  color: white;
   padding: 15px 50px;
   text-align: center;
   margin:auto;
   display:block;
+  box-shadow: -2px 2px gold, -2px 2px gold, -2px 2px gold;
+  border: 5px solid gold;
   text-decoration: none;
   font-size: 30px;
 }
 .viewNFT:hover {
-    background-color: goldenrod;
-    color: white;
+    background-color: black;
+    color: goldenrod;
+    
   }
