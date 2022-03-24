@@ -1,0 +1,31 @@
+.formHeader{
+    font-family: PixelSplitter;
+    color:cornsilk;
+    text-align:center;
+}
+.c{
+    position:relative;
+    background-color:black;
+}
+.raffle{
+    background-color:crimson;
+    text-align:right;
+    float:right;
+    width:50%;
+    display:block;
+}
+.whitel{
+    background-color:crimson;
+
+    float:left;
+    width:50%;
+    background-color: wheat;
+}
+.in-number{
+    width:50%;
+    border:10px;
+
+}
+.file-pic{
+    color:black;
+}

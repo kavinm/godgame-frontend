@@ -36,11 +36,11 @@ const NavBar = (props) => {
     const chainId = await ethereum.request({ method: "eth_chainId" });
     console.log(chainId);
 
-    if (accounts[0] && chainId == CORRECT_CHAIN_ID) {
+    if (accounts[0] && chainId === CORRECT_CHAIN_ID) {
       setCurrentAccount(accounts[0]);
       setIsWalletConnected(true);
       props.stateChanger(() => true);
-    } else if (chainId != CORRECT_CHAIN_ID) {
+    } else if (chainId !== CORRECT_CHAIN_ID) {
       alert("Wrong network! Please connect to Metis Andromeda");
     }
   };
@@ -62,14 +62,18 @@ const NavBar = (props) => {
             <a href="/faq">
               <button className="button1">FAQ</button>
             </a>
+            <a href="https://medium.com/@metisgodgame">
+              <button className="button3"> Whitepaper</button>
+            </a>
 
             <a href="/displaynft">
               <button className="button2">View NFT</button>
             </a>
-
-            <a href="https://medium.com/@metisgodgame">
-              <button className="button3"> Whitepaper</button>
+            <a href="/marketplace">
+              <button className= "button4">Market</button>
             </a>
+
+            
 
             <a href="https://discord.gg/YF4VWBjGNz">
               <FaDiscord className="discord" style={{ color: "white" }} />

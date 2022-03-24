@@ -4,6 +4,8 @@ import LandingComponent from "./components/LandingComponent";
 import AboutComponent from "./components/AboutComponent";
 import SampleMints from "./components/SampleMints";
 import RoadMap from "./components/RoadMap";
+import Marketplace from "./components/Marketplace";
+import CreateItem from "./components/CreateItem";
 
 import FaqPage from "./components/FaqPage";
 import DisplayNFT from "./components/DisplayNFT";
@@ -35,6 +37,14 @@ function App() {
             <FaqPage />
             </Route>
           </Switch> 
+          <Switch>
+            <Route exact path ="/marketplace">
+            <Marketplace />
+            </Route>
+              <Route exact path ="/createitem">
+              <CreateItem />
+              </Route>
+          </Switch>
         <Route exact path = "/">
           <LandingComponent isWalletConnected={isWalletConnected} />
           <AboutComponent/>
